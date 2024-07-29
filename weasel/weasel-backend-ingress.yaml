@@ -35,13 +35,3 @@ spec:
                 name: weasel-backend-service
                 port:
                   number: 8080
-    - host: weasel-argocd.kkamji.net
-      http:
-        paths:
-          - path: /*
-            pathType: ImplementationSpecific
-            backend:
-              service:
-                name: argocd-server
-                port:
-                  number: 80
