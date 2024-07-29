@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: weasel-backend
+  name: weasel-backend
+  namespace: weasel
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weasel-backend
+  template:
+    metadata:
+      labels:
+        app: weasel-backend
+    spec:
+      containers:
+      - image: 393035689023.dkr.ecr.us-east-1.amazonaws.com/weasel-backend:latest
+        name: weasel-backend
