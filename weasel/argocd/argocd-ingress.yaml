@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: weasel-ingress
-  namespace: weasel
+  namespace: argocd
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing # ALB를 인터넷에 노출
     alb.ingress.kubernetes.io/target-type: ip # ALB가 IP 모드로 동작하도록 설정 (ip -> 트래픽을 Pod IP로 직접 라우팅)
@@ -15,26 +15,6 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    # - host: weasel.kkamji.com
-    #   http:
-    #     paths:
-    #       - path: /*
-    #         pathType: ImplementationSpecific
-    #         backend:
-    #           service:
-    #             name: weasel-frontend-service
-    #             port:
-    #               number: 80
-    - host: weasel-backend.kkamji.net
-      http:
-        paths:
-          - path: /*
-            pathType: ImplementationSpecific
-            backend:
-              service:
-                name: weasel-backend-service
-                port:
-                  number: 8080
     - host: weasel-argocd.kkamji.net
       http:
         paths:
