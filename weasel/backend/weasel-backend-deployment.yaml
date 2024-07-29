@@ -16,5 +16,5 @@ spec:
         app: weasel-backend
     spec:
       containers:
-      - image: 393035689023.dkr.ecr.us-east-1.amazonaws.com/weasel-backend:34
+      - image: 393035689023.dkr.ecr.us-east-1.amazonaws.com/weasel-backend:35
         name: weasel-backend
