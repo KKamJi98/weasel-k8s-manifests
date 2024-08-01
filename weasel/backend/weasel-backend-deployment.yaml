@@ -6,7 +6,7 @@ metadata:
   name: weasel-backend
   namespace: weasel
 spec:
-  replicas: 1
+  # replicas: 3
   selector:
     matchLabels:
       app: weasel-backend
@@ -18,3 +18,10 @@ spec:
       containers:
       - image: 393035689023.dkr.ecr.us-east-1.amazonaws.com/weasel-backend:weasel-backend-40
         name: weasel-backend
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "350Mi"
+          limits:
+            cpu: "300m"
+            memory: "500Mi"
