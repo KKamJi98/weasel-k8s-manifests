@@ -31,9 +31,9 @@ spec:
       - type: Pods
         value: 2
         periodSeconds: 15
-      - type: Percent
-        value: 50
-        periodSeconds: 15
+      # - type: Percent
+      #   value: 50
+      #   periodSeconds: 15
     scaleDown:
       stabilizationWindowSeconds: 60
       selectPolicy: Min
@@ -41,6 +41,6 @@ spec:
       - type: Pods
         value: 2
         periodSeconds: 15
-      - type: Percent
-        value: 50
-        periodSeconds: 15
+      # - type: Percent
+      #   value: 50
+      #   periodSeconds: 15
