@@ -9,3 +9,17 @@ spec:
   - name: aws-cli-container
     image: amazon/aws-cli:2.0.30
     command: ["/bin/bash", "-c", "while true; do sleep infinity; done;"]
+    volumeMounts:
+        - name: weasel-secrets
+          mountPath: "/mnt/secrets"
+          readOnly: true
+    envFrom:
+    - secretRef:
+        name: weasel-secrets
+  volumes:
+      - name: weasel-secrets
+        csi:
+          driver: secrets-store.csi.k8s.io
+          readOnly: true
+          volumeAttributes:
+            secretProviderClass: weasel-secrets
