@@ -22,7 +22,7 @@ spec:
       name: cpu
       target:
         type: Utilization
-        averageUtilization: 60  # CPU 사용률을 60%로 설정
+        averageUtilization: 80  # CPU 사용률을 80%로 설정
   behavior:
     scaleUp:
       stabilizationWindowSeconds: 60
