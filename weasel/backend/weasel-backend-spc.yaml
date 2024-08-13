@@ -23,8 +23,8 @@ spec:
           key: accessKey
         - objectName: secretKey
           key: secretKey
-        - objectName: mysql-username
-          key: mysql-username
+        - objectName: MYSQL_USERNAME
+          key: MYSQL_USERNAME
   parameters:
     objects: |
       - objectName: "arn:aws:secretsmanager:us-east-1:393035689023:secret:/secret/prod/weasel-I4AhIF"
@@ -43,5 +43,5 @@ spec:
             objectAlias: accessKey
           - path: secretKey
             objectAlias: secretKey
-          - path: mysql-username
-            objectAlias: mysql-username
+          - path: MYSQL_USERNAME
+            objectAlias: MYSQL_USERNAME
