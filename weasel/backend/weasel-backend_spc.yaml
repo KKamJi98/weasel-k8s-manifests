@@ -1,0 +1,43 @@
+apiVersion: secrets-store.csi.x-k8s.io/v1
+kind: SecretProviderClass
+metadata:
+  name: weasel-secrets
+  namespace: weasel
+spec:
+  provider: aws
+  secretObjects:
+    - secretName: weasel-secrets
+      type: Opaque
+      data:
+        - objectName: HOST  # Kubernetes Secret에서 사용할 키 이름
+          key: HOST
+        - objectName: PORT
+          key: PORT
+        - objectName: DATABASE
+          key: DATABASE
+        - objectName: USERNAME
+          key: USERNAME
+        - objectName: PASSWORD
+          key: PASSWORD
+        - objectName: accessKey 
+          key: accessKey
+        - objectName: secretKey
+          key: secretKey
+  parameters:
+    objects: |
+      - objectName: "arn:aws:secretsmanager:us-east-1:393035689023:secret:/secret/prod/weasel-I4AhIF"
+        jmesPath:
+          - path: HOST
+            objectAlias: HOST
+          - path: PORT
+            objectAlias: PORT
+          - path: DATABASE
+            objectAlias: DATABASE
+          - path: USERNAME
+            objectAlias: USERNAME
+          - path: PASSWORD
+            objectAlias: PASSWORD
+          - path: accessKey
+            objectAlias: accessKey
+          - path: secretKey
+            objectAlias: secretKey
