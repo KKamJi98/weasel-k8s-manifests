@@ -28,11 +28,11 @@ spec:
             name: weasel-secrets
         resources:
           requests:
-            cpu: "500m"
+            cpu: "250m"
             memory: "512Mi"
           limits:
             cpu: "500m"
-            memory: "512Mi"
+            memory: "1Gi"
       volumes:
       - name: weasel-secrets
         csi:
