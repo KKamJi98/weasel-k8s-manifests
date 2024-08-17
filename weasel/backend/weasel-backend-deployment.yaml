@@ -17,7 +17,7 @@ spec:
     spec:
       serviceAccountName: weasel-eks-pod-sa
       containers:
-      - image: 393035689023.dkr.ecr.us-east-1.amazonaws.com/weasel-backend:weasel-backend-84
+      - image: 393035689023.dkr.ecr.us-east-1.amazonaws.com/weasel-backend:weasel-backend-85
         name: weasel-backend
         volumeMounts:
         - name: weasel-secrets
