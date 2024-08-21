@@ -7,24 +7,36 @@ weasel-kubernetes-manifests
 .
 ├── README.md
 └── weasel
-    ├── argocd
-    │   └── argocd-ingress.yaml
+    ├── al2
+    │   └── al2.yaml
     ├── backend
     │   ├── weasel-backend-deployment.yaml
     │   ├── weasel-backend-hpa.yaml
-    │   └── weasel-backend-service.yaml
+    │   ├── weasel-backend-service.yaml
+    │   └── weasel-backend-spc.yaml
+    ├── efk
+    │   ├── elasticsearch.yaml
+    │   └── kibana.yaml
     ├── grafana
     │   ├── grafana-deployment.yaml
-    │   ├── grafana-ingress.yaml
     │   ├── grafana-pvc.yaml
     │   └── grafana.service.yaml
+    ├── ingress
+    │   ├── application
+    │   │   ├── argocd-ingress.yaml
+    │   │   └── weasel-ingress.yaml
+    │   └── monitoring
+    │       ├── log
+    │       │   ├── elasticsearch-ingress.yaml
+    │       │   └── kibana-ingress.yaml
+    │       └── resource
+    │           ├── grafana-ingress.yaml
+    │           └── prometheus-ingress.yaml
     ├── karpenter
     │   ├── controller-policy.json
     │   ├── controller-trust-policy.json
     │   ├── karpenter.yaml
     │   └── nodepool.yaml
-    ├── prometheus
-    │   └── prometheus-ingress.yaml
-    ├── weasel-ingress.yaml
-    └── weasel-ns.yaml
+    └── namespaces
+        └── weasel-ns.yaml
 ```
