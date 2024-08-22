@@ -25,6 +25,12 @@ spec:
           key: secretKey
         - objectName: MYSQL_USERNAME
           key: MYSQL_USERNAME
+        - objectName: oauth2_clientId
+          key: oauth2_clientId
+        - objectName: oauth2_clientSecret
+          key: oauth2_clientSecret
+        - objectName: oauth2_redirectUri
+          key: oauth2_redirectUri
   parameters:
     objects: |
       - objectName: "arn:aws:secretsmanager:us-east-1:393035689023:secret:/secret/prod/weasel-I4AhIF"
@@ -45,3 +51,9 @@ spec:
             objectAlias: secretKey
           - path: MYSQL_USERNAME
             objectAlias: MYSQL_USERNAME
+          - path: oauth2_clientId
+            objectAlias: oauth2_clientId
+          - path: oauth2_clientSecret
+            objectAlias: oauth2_clientSecret
+          - path: oauth2_redirectUri
+            objectAlias: oauth2_redirectUri
