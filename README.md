@@ -1,6 +1,6 @@
 # weasel-k8s-manifests
 
-(https://github.com/Team-S5T1)
+<https://github.com/Team-S5T1>
 
 ## 파일 구조
 
