@@ -1,5 +1,5 @@
 # weasel-k8s-manifests
-weasel-kubernetes-manifests
+[weasel-kubernetes-manifests](https://github.com/Team-S5T1)
 
 ## 파일 구조
 
